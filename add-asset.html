@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Asset - ICT Asset Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">ICT</div>
+            <h2>Asset Management</h2>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="nav-link">
+                <span>▣</span> Dashboard
+            </a>
+
+            <a href="assets.html" class="nav-link">
+                <span>▤</span> Assets
+            </a>
+
+            <a href="add-asset.html" class="nav-link active">
+                <span>＋</span> Add Asset
+            </a>
+
+            <a href="staff.html" class="nav-link">
+                <span>♙</span> Staff
+            </a>
+
+            <a href="assignments.html" class="nav-link">
+                <span>⇄</span> Assignments
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                <span>▥</span> Reports
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="nav-link logout">
+                <span>↪️</span> Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Add ICT Asset</h1>
+
+                <p>Register new equipment</p>
+
+            </div>
+
+        </header>
+
+
+        <section class="panel form-panel">
+
+            <form id="assetForm">
+
+                <div class="form-section">
+
+                    <h2>Asset Information</h2>
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label>Asset Code *</label>
+
+                            <input
+                                type="text"
+                                name="asset_code"
+                                placeholder="e.g. ICT-001"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Asset Name *</label>
+
+                            <input
+                                type="text"
+                                name="asset_name"
+                                placeholder="e.g. HP Laptop"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Category *</label>
+
+                            <select name="category" required>
+
+                                <option value="">
+                                    Select category
+                                </option>
+
+                                <option>Laptop</option>
+                                <option>Computer</option>
+                                <option>Printer</option>
+                                <option>Router</option>
+                                <option>Switch</option>
+                                <option>Monitor</option>
+                                <option>Projector</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Brand</label>
+
+                            <input
+                                type="text"
+                                name="brand"
+                                placeholder="e.g. HP"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Model</label>
+
+                            <input
+                                type="text"
+                                name="model"
+                                placeholder="Enter model"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Serial Number</label>
+
+                            <input
+                                type="text"
+                                name="serial_number"
+                                placeholder="Enter serial number"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Location *</label>
+
+                            <input
+                                type="text"
+                                name="location"
+                                placeholder="e.g. ICT Office"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Condition *</label>
+
+                            <select name="condition" required>
+
+                                <option value="">
+                                    Select condition
+                                </option>
+
+                                <option>New</option>
+                                <option>Good</option>
+                                <option>Fair</option>
+                                <option>Faulty</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Status *</label>
+
+                            <select name="status" required>
+
+                                <option value="">
+                                    Select status
+                                </option>
+
+                                <option>Available</option>
+                                <option>In Use</option>
+                                <option>Under Repair</option>
+                                <option>Retired</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <a href="assets.html"
+                       class="btn btn-secondary">
+                        Cancel
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+                        Save Asset
+                    </button>
+
+                </div>
+
+                <p id="assetMessage" class="message"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
