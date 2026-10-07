@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Asset Management - Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-page">
+
+    <div class="login-container">
+
+        <div class="login-header">
+            <div class="logo">ICT</div>
+            <h1>ICT Asset Management</h1>
+            <p>Internal ICT Unit</p>
+        </div>
+
+        <form id="loginForm">
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter username"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+
+                <div class="password-field">
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="show-password"
+                        onclick="togglePassword()"
+                    >
+                        Show
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary login-btn">
+                Login
+            </button>
+
+            <p id="loginMessage" class="message"></p>
+
+        </form>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

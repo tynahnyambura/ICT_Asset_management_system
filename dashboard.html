@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - ICT Asset Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">ICT</div>
+            <h2>Asset Management</h2>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="nav-link active">
+                <span>▣</span>
+                Dashboard
+            </a>
+
+            <a href="assets.html" class="nav-link">
+                <span>▤</span>
+                Assets
+            </a>
+
+            <a href="add-asset.html" class="nav-link">
+                <span>＋</span>
+                Add Asset
+            </a>
+
+            <a href="staff.html" class="nav-link">
+                <span>♙</span>
+                Staff
+            </a>
+
+            <a href="assignments.html" class="nav-link">
+                <span>⇄</span>
+                Assignments
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                <span>▥</span>
+                Reports
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="nav-link logout">
+                <span>↪️</span>
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>ICT Asset Management System</p>
+            </div>
+
+            <div class="user-info">
+
+                <div class="user-avatar">A</div>
+
+                <div>
+                    <strong>Admin</strong>
+                    <small>ICT Administrator</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- STATISTICS -->
+
+        <section class="statistics">
+
+
+            <!-- TOTAL ASSETS -->
+
+            <div class="stat-card total-assets">
+
+                <div class="stat-icon">▤</div>
+
+                <div class="stat-info">
+                    <p>Total Assets</p>
+                    <h2>125</h2>
+                </div>
+
+            </div>
+
+
+            <!-- ASSETS IN USE -->
+
+            <div class="stat-card in-use">
+
+                <div class="stat-icon">✓</div>
+
+                <div class="stat-info">
+                    <p>Assets In Use</p>
+                    <h2>95</h2>
+                </div>
+
+            </div>
+
+
+            <!-- AVAILABLE -->
+
+            <div class="stat-card available">
+
+                <div class="stat-icon">+</div>
+
+                <div class="stat-info">
+                    <p>Available</p>
+                    <h2>20</h2>
+                </div>
+
+            </div>
+
+
+            <!-- FAULTY -->
+
+            <div class="stat-card faulty">
+
+                <div class="stat-icon">!</div>
+
+                <div class="stat-info">
+                    <p>Faulty</p>
+                    <h2>10</h2>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- CONTENT GRID -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- RECENT ASSETS -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>Recent Assets</h2>
+                        <p>Recently registered ICT equipment</p>
+                    </div>
+
+                    <a href="assets.html" class="view-link">
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Asset Code</th>
+                                <th>Asset Name</th>
+                                <th>Category</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <!-- ASSET 1 -->
+
+                            <tr>
+
+                                <td>ICT-001</td>
+
+                                <td>HP Laptop</td>
+
+                                <td>Laptop</td>
+
+                                <td>ICT Office</td>
+
+                                <td>
+
+                                    <span class="status in-use">
+                                        In Use
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- ASSET 2 -->
+
+                            <tr>
+
+                                <td>ICT-002</td>
+
+                                <td>Dell Desktop</td>
+
+                                <td>Computer</td>
+
+                                <td>Finance</td>
+
+                                <td>
+
+                                    <span class="status available">
+                                        Available
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+
+                            <!-- ASSET 3 -->
+
+                            <tr>
+
+                                <td>ICT-003</td>
+
+                                <td>HP Printer</td>
+
+                                <td>Printer</td>
+
+                                <td>HR Office</td>
+
+                                <td>
+
+                                    <span class="status faulty">
+                                        Faulty
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>Quick Actions</h2>
+
+                        <p>Frequently used functions</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+
+                    <!-- ADD ASSET -->
+
+                    <a href="add-asset.html" class="action-card">
+
+                        <span>＋</span>
+
+                        <div>
+
+                            <strong>Add Asset</strong>
+
+                            <small>
+                                Register new equipment
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- MANAGE STAFF -->
+
+                    <a href="staff.html" class="action-card">
+
+                        <span>♙</span>
+
+                        <div>
+
+                            <strong>Manage Staff</strong>
+
+                            <small>
+                                View staff records
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- ASSIGN ASSET -->
+
+                    <a href="assignments.html" class="action-card">
+
+                        <span>⇄</span>
+
+                        <div>
+
+                            <strong>Assign Asset</strong>
+
+                            <small>
+                                Assign equipment to staff
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- VIEW REPORTS -->
+
+                    <a href="reports.html" class="action-card">
+
+                        <span>▥</span>
+
+                        <div>
+
+                            <strong>View Reports</strong>
+
+                            <small>
+                                Generate asset reports
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
