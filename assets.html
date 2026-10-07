@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assets - ICT Asset Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo">ICT</div>
+            <h2>Asset Management</h2>
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html" class="nav-link">
+                <span>▣</span> Dashboard
+            </a>
+
+            <a href="assets.html" class="nav-link active">
+                <span>▤</span> Assets
+            </a>
+
+            <a href="add-asset.html" class="nav-link">
+                <span>＋</span> Add Asset
+            </a>
+
+            <a href="staff.html" class="nav-link">
+                <span>♙</span> Staff
+            </a>
+
+            <a href="assignments.html" class="nav-link">
+                <span>⇄</span> Assignments
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                <span>▥</span> Reports
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="nav-link logout">
+                <span>↪️</span> Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+                <h1>ICT Assets</h1>
+                <p>Manage registered ICT equipment</p>
+            </div>
+
+            <a href="add-asset.html" class="btn btn-primary">
+                + Add Asset
+            </a>
+
+        </header>
+
+
+        <section class="panel">
+
+            <div class="filter-bar">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="assetSearch"
+                        placeholder="Search assets..."
+                        onkeyup="searchAssets()"
+                    >
+
+                </div>
+
+
+                <select id="categoryFilter">
+
+                    <option value="">All Categories</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Computer">Computer</option>
+                    <option value="Printer">Printer</option>
+                    <option value="Router">Router</option>
+                    <option value="Switch">Switch</option>
+                    <option value="Monitor">Monitor</option>
+
+                </select>
+
+
+                <select id="statusFilter">
+
+                    <option value="">All Statuses</option>
+                    <option value="In Use">In Use</option>
+                    <option value="Available">Available</option>
+                    <option value="Faulty">Faulty</option>
+                    <option value="Under Repair">Under Repair</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table id="assetsTable">
+
+                    <thead>
+
+                        <tr>
+                            <th>Asset Code</th>
+                            <th>Asset Name</th>
+                            <th>Category</th>
+                            <th>Brand</th>
+                            <th>Location</th>
+                            <th>Condition</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>ICT-001</td>
+                            <td>HP Laptop</td>
+                            <td>Laptop</td>
+                            <td>HP</td>
+                            <td>ICT Office</td>
+                            <td>Good</td>
+
+                            <td>
+                                <span class="status in-use">
+                                    In Use
+                                </span>
+                            </td>
+
+                            <td class="actions">
+
+                                <button class="btn-small edit">
+                                    Edit
+                                </button>
+
+                                <button
+                                    class="btn-small delete"
+                                    onclick="deleteAsset()"
+                                >
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>ICT-002</td>
+                            <td>Dell Desktop</td>
+                            <td>Computer</td>
+                            <td>Dell</td>
+                            <td>Finance</td>
+                            <td>Good</td>
+
+                            <td>
+                                <span class="status available">
+                                    Available
+                                </span>
+                            </td>
+
+                            <td class="actions">
+
+                                <button class="btn-small edit">
+                                    Edit
+                                </button>
+
+                                <button
+                                    class="btn-small delete"
+                                    onclick="deleteAsset()"
+                                >
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>ICT-003</td>
+                            <td>HP Printer</td>
+                            <td>Printer</td>
+                            <td>HP</td>
+                            <td>HR Office</td>
+                            <td>Faulty</td>
+
+                            <td>
+                                <span class="status faulty">
+                                    Faulty
+                                </span>
+                            </td>
+
+                            <td class="actions">
+
+                                <button class="btn-small edit">
+                                    Edit
+                                </button>
+
+                                <button
+                                    class="btn-small delete"
+                                    onclick="deleteAsset()"
+                                >
+                                    Delete
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
